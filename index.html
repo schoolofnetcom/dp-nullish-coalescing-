@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const baz = 10 ?? 'string';
+        // console.log(baz);
+
+        const obj = {
+            name: 'Leonan',
+            age: 24,
+            city: null
+        };
+
+        const personCity = obj?.city ?? 'São Paulo';
+        // console.log(personCity);
+
+        function fn1() {
+            console.log('fn1 fired');
+            return true;
+        }
+
+        function fn2() {
+            console.log('fn2 fired');
+            return undefined;
+        }
+
+        // console.log(fn2() ?? fn1());
+
+        let altura = null;
+        let largura = null;
+        const m2 = (largura ?? 5) * (altura ?? 3);
+        console.log(m2);
+    </script>
+</body>
+</html>
